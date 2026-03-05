@@ -11,6 +11,11 @@ All models are trained using transfer learning with ImageNet weights and evaluat
 The dataset used in this project consists of **12,946 cropped leaf images** derived from **314 herbarium specimens** representing **30 Kirganelia species**.
 Original herbarium images were obtained from the Naturalis Biodiversity Center digital collections.
 Each specimen sheet was automatically cropped into multiple **224 × 224 pixel leaf patches**, which were then used as input for the deep learning models.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0b1eee68-6afe-4d4f-8d3c-09b18249bfb6" width="30%">
+  <br>
+  <b>Figure 1.</b> Digitized herbarium specimen of K. vieillardii (specimen ID: L.2253032).
+</p>
 
 ---
 
@@ -19,6 +24,19 @@ Each specimen sheet was automatically cropped into multiple **224 × 224 pixel l
 Before training the models, herbarium sheet images are processed using an automatic cropping script.
 The script detects leaf areas based on color features (HSV and LAB color space), grayscale intensity, texture (Laplacian), and edges (Sobel and Canny).
 Detected leaf regions are then extracted using a **224 × 224 sliding window**, producing multiple cropped leaf images per specimen.
+
+<table>
+<tr>
+<td align="center" width="30%">
+<img src="https://github.com/user-attachments/assets/d51d1c5c-9437-4403-9530-b37e9e510df3" width="100%">
+<b>Figure 2.</b> Automatic leaf cropping using a sliding window (224×224 px). Red boxes are rejected, green boxes pass the leaf coverage threshold (60%), and yellow boxes are selected and saved based on the defined number of desired crops.
+</td>
+<td align="center" width="30%">
+<img src="https://github.com/user-attachments/assets/e1463990-30f4-45d0-90c3-6e0347f90ef0" width="100%">
+<b>Figure 3.</b> Examples of randomly selected cropped leaf images from different species.
+</td>
+</tr>
+</table>
 
 Script used for cropping:
 
