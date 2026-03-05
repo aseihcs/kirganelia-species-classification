@@ -3,6 +3,11 @@
 The goal of this project is to evaluate how well deep learning models can classify **30 species of Kirganelia** using **cropped leaf images from herbarium specimens**.
 The experiments compare three convolutional neural network (CNN) architectures: ResNet50, EfficientNetV2-S, and MobileNetV3-Large.
 All models are trained using transfer learning with ImageNet weights and evaluated under different strategies for handling class imbalance.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b4e28d7e-3771-4d10-b9b6-5d165e409f5a" width="100%">
+  <br>
+  <b>Figure 1.</b> Distribution of the number of specimens for each Kirganelia species.
+</p>
 
 ---
 
@@ -14,7 +19,7 @@ Each specimen sheet was automatically cropped into multiple **224 × 224 pixel l
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0b1eee68-6afe-4d4f-8d3c-09b18249bfb6" width="30%">
   <br>
-  <b>Figure 1.</b> Digitized herbarium specimen of K. vieillardii (specimen ID: L.2253032).
+  <b>Figure 2.</b> Digitized herbarium specimen of K. vieillardii (specimen ID: L.2253032).
 </p>
 
 ---
@@ -29,11 +34,11 @@ Detected leaf regions are then extracted using a **224 × 224 sliding window**, 
 <tr>
 <td align="center" width="30%">
 <img src="https://github.com/user-attachments/assets/d51d1c5c-9437-4403-9530-b37e9e510df3" width="100%">
-<b>Figure 2.</b> Automatic leaf cropping using a sliding window (224×224 px). Red boxes are rejected, green boxes pass the leaf coverage threshold (60%), and yellow boxes are selected and saved based on the defined number of desired crops.
+<b>Figure 3.</b> Automatic leaf cropping using a sliding window (224×224 px). Red boxes are rejected, green boxes pass the leaf coverage threshold (60%), and yellow boxes are selected and saved based on the defined number of desired crops.
 </td>
 <td align="center" width="30%">
 <img src="https://github.com/user-attachments/assets/e1463990-30f4-45d0-90c3-6e0347f90ef0" width="100%">
-<b>Figure 3.</b> Examples of randomly selected cropped leaf images from different species.
+<b>Figure 4.</b> Examples of randomly selected cropped leaf images from different species.
 </td>
 </tr>
 </table>
